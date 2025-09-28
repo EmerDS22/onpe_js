@@ -1,65 +1,326 @@
-﻿<!DOCTYPE html> 
+﻿<!DOCTYPE html>
 <html>
-  <head>
-    <title>ONPE - Oficina Nacional de Procesos Electorales</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  />
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen"/>
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="screen"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen"/>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="pull-left logo-onpe">
-          <div class="pull-left">
-            <a href="index.html"><img src="images/onpe-trans.png"></a>
-          </div>
-          
-          <div class="pull-left">
-            <h1>PRESENTACIÓN DE RESULTADOS</h1>
-          </div>
+
+<head>
+  <title>ONPE - Oficina Nacional de Procesos Electorales</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="pull-left logo-onpe">
+        <div class="pull-left">
+          <a href="#"><img src="images/onpe-trans.png"></a>
         </div>
-  
-        <div class="pull-right logo">
-          <img src="images/eegg2016-trans.png" width="218" height="35">
+        <div class="pull-left">
+          <h1>PRESENTACIÓN DE RESULTADOS</h1>
         </div>
       </div>
-    </header>
-    
+      <div class="pull-right logo">
+        <img src="images/eegg2016-trans.png" width="218" height="35">
+      </div>
+    </div>
+  </header>
+
+  <main id="app-container"></main>
+
+  <footer class="footer-inside">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 direc01">
+          <span>CONTÁCTENOS</span>
+          <p>Jr. Washington 1894, Cercado de Lima </p>
+          <p>Correo electrónico: <a href="#">informes@onpe.gob.pe</a></p>
+          <p>Central Telefónica: 417 - 0630 / Lunes a Viernes 08:30 - 16:30 hrs</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <template id="template-home">
     <section class="container space02 nosub">
       <div class="pull-left pd02 ancho-ie">
-          <a href="presidenciales.html">
-            <div class="grow pic btn01"><img src="images/presidenciales.jpg" ></div>
-            <div class="tit02"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span><p>PRESIDENCIALES</p></div>
-          </a>
+        <a href="#presidenciales">
+          <div class="grow pic btn01"><img src="images/presidenciales.jpg"></div>
+          <div class="tit02"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+            <p>PRESIDENCIALES</p>
+          </div>
+        </a>
       </div>
       <div class="pull-left pd02 oculto2 ancho-ie">
-        <a href="actas_ubigeo.html">
-          <div class="grow pic btn04"><img src="images/actas.jpg" ></div>
-          <div class="tit02"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span><p>ACTAS</p></div>
+        <a href="#actas_ubigeo">
+          <div class="grow pic btn04"><img src="images/actas.jpg"></div>
+          <div class="tit02"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+            <p>ACTAS</p>
+          </div>
         </a>
       </div>
       <div class="pull-left pd01 ancho-ie">
-        <a href="participacion.html">
-          <div class="grow pic btn05"><img src="images/participacion.jpg" ></div>
-        <div class="tit01"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span><p>PARTICIPACIÓN <br> CIUDADANA</p></div>
+        <a href="#participacion">
+          <div class="grow pic btn05"><img src="images/participacion.jpg"></div>
+          <div class="tit01"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+            <p>PARTICIPACIÓN <br> CIUDADANA</p>
+          </div>
         </a>
       </div>
     </section>
-    
-    <footer class="footer-index">
-      <div class="container">
+  </template>
+
+  <template id="template-actas-ubigeo">
+    <div class="container">
+      <img src="images/f-actas.jpg" width="1170" height="248" class="img-responsive mg30top">
+      <section class="menu navbar-default menu05">
+        <nav class="navbar-collapse bs-navbar-collapse collapse" aria-expanded="false">
+          <ul class="nav navbar-nav">
+            <li class="bt-azul"><a href="#presidenciales">PRESIDENCIAL</a></li>
+            <li class="bt-amarillo act-amarillo"><a href="#actas_ubigeo">ACTAS</a></li>
+            <li class="bt-rojo"><a href="#participacion">PARTICIPACIÓN CIUDADANA</a></li>
+          </ul>
+        </nav>
+      </section>
+      <br /><br /><br /><br />
+      <section class="contenedor">
         <div class="row">
-          <div class="col-md-12 direc01">
-            <span>CONTÁCTENOS</span>
-            <p>Jr. Washington 1894, Cercado de Lima </p>
-            <p>Correo electrónico: <a href="#">informes@onpe.gob.pe</a></p>
-            <p>Central Telefónica: 417 - 0630 / Lunes a Viernes 08:30 - 16:30 hrs</p>
+          <div class="col-xs-12 col-md-3">
+            <div class="menu-interna">
+              <ul>
+                <li><a href="#actas_ubigeo" class="act-izq">Actas por ubigeo</a></li>
+                <li><a href="#actas_numero">Actas por número</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-9" id="impreso">
+            <div class="contenido-interna">
+              <div class="titulos col-xs-12">
+                <div class="col-xs-11">
+                  <h3><span class="glyphicon glyphicon-circle-arrow-right"></span> SEGUNDA ELECCIÓN PRESIDENCIAL 2016: ACTAS POR UBIGEO</h3>
+                </div>
+              </div>
+              <form id="frmBuscar" name="frmBuscar" action="" method="post" class="horizontal-form">
+                <div class="row">
+                  <div class="col-md-3">
+                    <label class="control-label">Ámbito:</label>
+                    <div id="ambito" class="form-group">
+                      <select name="cdgoAmbito" id="cdgoAmbito" class="form-control">
+                        <option value="P">PERÚ</option>
+                        <option value="E">EXTRANJERO</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="dvNombreDepartamento" class="col-md-3" style="">
+                    <div class="form-group">
+                      <label id="lblDepartamento" class="control-label">Departamento:</label>
+                      <div id="departamentos">
+                        <select name="cdgoDep" id="cdgoDep" class="form-control">
+                          <option selected="selected" value="">--SELECCIONE--</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="dvNombreProvincia" class="col-md-3" style="">
+                    <div class="form-group">
+                      <label id="lblProvincia" class="control-label">Provincia:</label>
+                      <div id="provincias">
+                        <select name="cdgoProv" id="cdgoProv" class="form-control">
+                          <option selected="selected" value="">--SELECCIONE--</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label id="lblDistrito" class="control-label">Distrito:</label>
+                        <div id="distritos" class="form-group">
+                            <select name="cdgoDist" id="cdgoDist" class="form-control">
+                                <option selected="selected" value="">--SELECCIONE--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label class="control-label">Locales:</label>
+                            <div id="divLocal">
+                                <select name="actas_ubigeo" id="actas_ubigeo" class="form-control">
+                                    <option value="-1?-1" selected="selected">--SELECCIONE--</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divMesasContainer" class="ptop20"></div>
+                    <div id="divActaDetailContainer" class="ptop20"></div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-      
-  </body>
+      </section>
+    </div>
+  </template>
+
+  <template id="template-actas-numero">
+    <div class="container">
+        <img src="images/f-actas.jpg" width="1170" height="248" class="img-responsive mg30top">
+        <section class="menu navbar-default menu05">
+            <nav class="navbar-collapse bs-navbar-collapse collapse" aria-expanded="false">
+                <ul class="nav navbar-nav">
+                    <li class="bt-azul"><a href="#presidenciales">PRESIDENCIAL</a></li>
+                    <li class="bt-amarillo act-amarillo"><a href="#actas_ubigeo">ACTAS</a></li>
+                    <li class="bt-rojo"><a href="#participacion">PARTICIPACIÓN CIUDADANA</a></li>
+                </ul>
+            </nav>
+        </section>
+        <br/><br/><br/><br/>
+        <section class="contenedor">
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <div class="menu-interna">
+                        <ul>
+                            <li><a href="#actas_ubigeo">Actas por ubigeo</a></li>
+                            <li><a href="#actas_numero" class="act-izq">Actas por número</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-9" id="impreso">
+                    <div class="contenido-interna">
+                        <div class="titulos col-xs-12">
+                            <div class="col-xs-11">
+                                <h3><span class="glyphicon glyphicon-circle-arrow-right"></span> SEGUNDA ELECCIÓN PRESIDENCIAL 2016: ACTAS POR NÚMERO</h3>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div id="page-wrap">
+                                <br>
+                                <form id="myform" name="myform" class="horizontal-form" method="post" action="#">
+                                    <div class="col-md-3">INGRESE EL NÚMERO DE ACTA:</div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input id="nroMesa" name="nroMesa" type="text" maxlength="6" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> BUSCAR</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="divDetalle" class="ptop20"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+  </template>
+
+  <template id="template-participacion">
+    <div class="container">
+      <img src="images/f-participacion.jpg" width="1170" height="248" class="img-responsive mg30top">
+      <section class="menu navbar-default menu05">
+        <nav class="navbar-collapse bs-navbar-collapse collapse" aria-expanded="false">
+            <ul class="nav navbar-nav">
+                <li class="bt-azul"><a href="#presidenciales">PRESIDENCIAL</a></li>
+                <li class="bt-amarillo"><a href="#actas_ubigeo">ACTAS</a></li>
+                <li class="bt-rojo act-rojo"><a href="#participacion">PARTICIPACIÓN CIUDADANA</a></li>
+            </ul>
+        </nav>
+      </section>
+      <br/><br/><br/><br/>
+      <section class="contenedor">
+        <div class="row">
+            <div class="col-xs-12 col-md-3">
+                <div class="menu-interna"><ul><li><a href="#participacion" class="act-izq">TOTAL</a></li></ul></div>
+            </div>
+            <div class="col-xs-12 col-md-9" id="impreso">
+              <div class="contenido-interna">
+                  <div class="titulos col-xs-12">
+                    <h3><span class="glyphicon glyphicon-circle-arrow-right"></span> SEGUNDA ELECCIÓN PRESIDENCIAL 2016: PARTICIPACIÓN CIUDADANA</h3>
+                  </div>
+                  <div class="col-xs-12 pbot30 ptop20">
+                      <div class="col-xs-12 col-md-6">
+                          <a href="#participacion_total/Extranjero"><img src="images/icono_extranjero.jpg" class="img-responsive"></a>
+                      </div>
+                      <div class="col-xs-12 col-md-6">
+                          <a href="#participacion_total/Nacional"><img src="images/icono_nacional.jpg" class="img-responsive"></a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </section>
+    </div>
+  </template>
+
+  <template id="template-participacion-total">
+    <div class="container">
+      <img src="images/f-participacion.jpg" width="1170" height="248" class="img-responsive mg30top">
+      <section class="menu navbar-default menu05">
+        <nav class="navbar-collapse bs-navbar-collapse collapse" aria-expanded="false">
+          <ul class="nav navbar-nav">
+            <li class="bt-azul"><a href="#presidenciales">PRESIDENCIAL</a></li>
+            <li class="bt-amarillo"><a href="#actas_ubigeo">ACTAS</a></li>
+            <li class="bt-rojo act-rojo"><a href="#participacion">PARTICIPACIÓN CIUDADANA</a></li>
+          </ul>
+        </nav>
+      </section>
+      <br /><br /><br /><br />
+      <section class="contenedor">
+        <div class="row">
+          <div class="col-xs-12 col-md-3">
+            <div class="menu-interna">
+              <ul><li><a href="#participacion">TOTAL</a></li></ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-9" id="impreso">
+            <div class="contenido-interna">
+              <div class="titulos col-xs-12">
+                <h3><span class="glyphicon glyphicon-circle-arrow-right"></span> SEGUNDA ELECCIÓN PRESIDENCIAL 2016: PARTICIPACIÓN CIUDADANA</h3>
+              </div>
+              <button type="button" class="btn btn-primary" id="btnRegresarParticipacion"><span class="glyphicon glyphicon-chevron-left"></span> REGRESAR</button>
+              <div class="col-xs-12 line pbot30">
+                  <div class="col-xs-12 col-md-6">
+                      <img id="participacion-img" src="images/estadistico.png" class="img-responsive">
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                      <div class="cont-recto" style="margin-bottom:10px" id="ambito-texto"></div>
+                      <p class="subtitle" id="electores-habiles-texto">ELECTORES HÁBILES</p>
+                      <div id="page-wrap">
+                          <table class="table09_2" cellspacing="0">
+                              <tbody id="participacion-resumen"></tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xs-12">
+                <div id="breadcrumb-container" class="breadcrumb-nav"></div>
+                <p class="subtitle">Consulta de participación DETALLADO</p>
+                <div id="page-wrap">
+                  <table class="table21">
+                    <tbody id="resultados-participacion">
+                      <tr class="titulo_tabla">
+                        <td>DEPARTAMENTO</td>
+                        <td>TOTAL ASISTENTES</td>
+                        <td>% TOTAL ASISTENTES</td>
+                        <td>TOTAL AUSENTES</td>
+                        <td>% TOTAL AUSENTES</td>
+                        <td>ELECTORES HÁBILES</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </template>
+
+  <script src="js/main.js"></script>
+
+</body>
 </html>
